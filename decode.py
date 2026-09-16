@@ -3,6 +3,9 @@ gross = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def decode(eingabe, schluessel):
+
+    eingabe = eingabe.encode("utf-8").hex()
+
     text = bytes.fromhex(eingabe).decode("utf-8")
 
     ergebnis = ""
@@ -17,6 +20,6 @@ def decode(eingabe, schluessel):
     return ergebnis
 
 
-eingabe = input("UTF-8-Bytes: ")
-schluessel = int(input("Verschiebung: "))
-print("Decodiert:", decode(eingabe, schluessel))
+#eingabe = input("UTF-8-Bytes: ")
+#schluessel = int(input("Verschiebung: "))
+#print("Decodiert:", decode(eingabe, schluessel))
